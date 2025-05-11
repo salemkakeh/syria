@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المعهد السوري</title>
+  
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+
+  <!-- INCLUDE GLOABEL FILE -->
+  <link rel="stylesheet" href="css/gloabel.css">
+
+
+  <!-- INCLUDE NORMALIZE FILE -->
+  <link rel="stylesheet" href="css/normalize.css">
+  
+  <!-- INCLUDE STYLE FILE -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+  <section class="main-sec">
+
+    <div class="text">
+      <img src="images/logo.svg" alt="">
+      <p>
+        اهلاً وسهلاً بكم في المعهد السوري
+        من فضلك قم بادخال المعلومات التالية 
+        لتسجيل الدخول
+      </p>
+    </div>
+
+    <section>
+      <div class="move">
+        <h2>
+          انشاء حساب كـ
+        </h2>
+        <div class="check">
+          <label for="">
+            طالب
+          </label>
+          <input type="checkbox" checked id="check">
+          <label for="check">
+            <span></span>
+          </label>
+          <label >
+            معلم
+          </label>
+        </div>
+      </div>
+        <form action="" >
+          <div class="input-box">
+            <label for="student_name">
+              اسم الطالب
+            </label>
+            <input type="text" id="student_name" placeholder="يجب ان يكون هذا الاسم فريد" required>
+          </div>
+          <div class="input-box">
+            <label for="pass">
+              كلمة المرور
+            </label>
+            <input type="password" id="pass" required>
+          </div>
+          <div class="input-box" id="c-full-name">
+            <label for="full_name">
+              الاسم الثلاثي
+            </label>
+            <input type="text" id="full_name" required>
+          </div>
+          <div class="input-box" id="c-phone">
+            <label for="phone">
+              رقم الموبايل
+            </label>
+            <input type="text" id="phone" required>
+          </div>
+          <div class="link" id="c-link">
+            <p>
+              هل لديك حساب؟
+            </p>
+            <a href="#" id="login-button">سجل الآن</a>
+          </div>
+          <div class="link active"  id="c-link-creat-acount">
+            <p>
+              اليس لديك حساب
+            </p>
+            <a href="#" id="login-button">اضغط هنا</a>
+          </div>
+          <input type="submit" class="sub"  value="انشاء حساب">
+          <input type="submit" class="sub active"  value="تسجيل دخول">
+        </form>
+        <form action="" class="active">
+          <div class="input-box">
+            <label for="student_name">
+              اسم المعلم
+            </label>
+            <input type="text" id="student_name" placeholder="يجب ان يكون هذا الاسم فريد" required>
+          </div>
+          <div class="input-box">
+            <label for="pass">
+              كلمة المرور
+            </label>
+            <input type="password" id="pass" required>
+          </div>
+          <div class="input-box" >
+            <label for="phone">
+              رقم الموبايل
+            </label>
+            <input type="text" id="phone" required>
+          </div>
+          <input type="submit"  value="تسجيل دخول">
+        </form>
+    </section>
+  </section>
+  <script src="js/regester.js">
+  </script>
+</body>
+</html>
