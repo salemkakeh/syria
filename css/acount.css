@@ -1,0 +1,253 @@
+body > header {
+    position: sticky;
+    top: 0;
+    z-index: 11111;
+    background-color: var(--main-color);
+    box-sizing: border-box;
+    box-shadow: 0 0 20px var(--shadow);
+}
+header .container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .logo img {
+    width: 60px;
+}
+.container nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.container nav ul a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: .5s;
+    margin-left: 20px;
+    font-size: 18px;
+}
+.container nav ul a:hover {
+    border-bottom: 1px solid var(--text-color);
+    color: var(--text-color);
+}
+.container nav ul a i {
+    font-size: 25px;
+    color: var(--color);
+}
+header .container .menu {
+    display: none;
+}
+header .container input[type='checkbox'] {
+    display: none;
+}
+header .container input[type='checkbox']:checked ~ aside{
+    opacity: 1;
+}
+header .container aside {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    height: calc(100vh - 80px);
+    width: 200px;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    padding-top: 60px;
+    transition: .5s;
+    opacity: 0;
+}
+#menu:checked ~ aside {
+    right: -150px;
+}
+.container aside li {
+    list-style: none;
+}
+.container aside li a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: var(--text-color);
+    padding: 10px;
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+.container aside li a {
+    border-bottom: 1px solid var(--text-color);
+}
+/* START RESPUNSIVE HEADER */
+@media (max-width: 992px) {
+    header .container nav ul {
+        gap: 25px;
+    }
+    .container nav ul li a {
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px) { 
+    header .container nav {
+        display: none;
+    }
+    header .container .menu {
+        display: block;
+    }
+}
+/* END RESPUNSIVE HEADER */
+/* END HEADER */
+
+/* START MAIN */
+main {
+    background-color: #fff;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.div {
+    flex: 1;
+}
+main .container .image {
+    width: 250px;
+    height: 250px;
+    flex: 1;
+    border: 2px solid var(--main-color); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+main .container .image > i {
+    font-size: 230px;
+    color: var(--text-color);
+    position: absolute;
+    bottom: -10px;
+}
+
+.add-image {
+    position: absolute;
+    bottom: 0;
+}
+main .container .image .add-image > input {
+    display: none;
+}
+main .container .image .add-image label {
+    background-color: var(--main-color);
+    padding: 12px;
+    width: 210px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-color);
+    /* transition-duration: .2s; */
+    transform: translateY(0px);
+    opacity: 0;
+}
+main .container .image:hover .add-image > label {
+    display: inline-block;
+    opacity: 1;
+    transform: translateY(100px);
+}
+main .container .image:hover .add-image > label {
+    display: inline-block;
+    opacity: 1;
+    transform: translateY(0);
+}
+main .container form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+    direction: rtl;
+}
+main .container form h1 {
+    margin: 0;
+    font-size: 22px;
+    color: var(--main-color);
+    text-align: center;
+}
+main .container form .input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 7px;
+}
+main .container form .input-box > input {
+    outline: none;
+    height: 36px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+}
+main .container form .link-password {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+main .container form .link-password > p {
+    margin: 0;
+}
+main .container form .submit {
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 15px;
+    width: 200px;
+}
+/* END MAIN */
+/* START RESPUNSIVE MAIN */
+@media (max-width: 992px) {
+    main .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    main .container .image {
+        margin-top: 20px;
+    }
+    main .container form {
+        margin-bottom: 20px;
+        width: 70%;
+    }
+}
+@media (max-width: 768px) {
+    main .container form {
+        width: 90%;
+    }
+    main .container .image {
+        width: 200px;
+        height: 200px;
+    }
+    main .container .image > i {
+        font-size: 190px;
+    }
+}
+@media (max-width: 576px) {
+        main .container {
+            width: 100%;
+            padding: 0 30px;
+        }
+    main .container form {
+        width: 100%;
+    }
+    main .container form .input-box {
+        width: 100%;
+    }
+    main .container form .submit {
+        align-self: center;
+    }
+}
+/* END RESPUNSIVE MAIN */
+/* END MAIN */
