@@ -1,6 +1,6 @@
 /* START FOOFTER */
 footer {
-    min-height: calc(80vh - 100px);
+    min-height: calc(100vh - 100px);
     background-color: var(--main-color);
     color: var(--text-color);
     display: flex;
@@ -12,6 +12,7 @@ footer {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
+    border-top: 1px solid #fff;
 }
 footer .container {
     display: flex;
@@ -54,8 +55,19 @@ footer .container > p {
 /* END FOOTER */
 
 /* START RESPUNSIVE FOOTER */
+@media (max-width: 768px) {
+    footer {
+        background-size: 800px;
+        background-position: 0 200px;
+        height: calc(80vh -100px);
+    }
+    footer .container > p {
+        margin-top: 20px;
+    } 
+}
 @media (max-width: 576px) {
     footer {
+        background-position: 0 400px;
         align-items: center;
     }
     footer > p {

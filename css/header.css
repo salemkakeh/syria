@@ -45,7 +45,8 @@ header .container input[type='checkbox'] {
     display: none;
 }
 header .container input[type='checkbox']:checked ~ aside{
-    opacity: 1;
+    /* opacity: 1; */
+    display: block;
 }
 header .container aside {
     position: fixed;
@@ -60,7 +61,8 @@ header .container aside {
     padding: 30px;
     padding-top: 60px;
     transition: .5s;
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
 }
 #menu:checked ~ aside {
     right: -150px;

@@ -292,6 +292,9 @@ section .container .cards-teacher .card .name-teacher > p {
 }
 section .container .cards-teacher .card > img {
     width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* START RESPUNSIVE FOR SECTION THREE */

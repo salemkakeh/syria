@@ -221,11 +221,6 @@ main .container form .submit {
         margin-bottom: 20px;
         width: 70%;
     }
-}
-@media (max-width: 768px) {
-    main .container form {
-        width: 90%;
-    }
     main .container .image {
         width: 200px;
         height: 200px;
@@ -234,11 +229,17 @@ main .container form .submit {
         font-size: 190px;
     }
 }
+@media (max-width: 768px) {
+    main .container form {
+        width: 90%;
+    }
+}
 @media (max-width: 576px) {
-        main .container {
-            width: 100%;
-            padding: 0 30px;
-        }
+    main .container {
+        width: 100%;
+        padding: 0 30px;
+        gap: 25px;
+    }
     main .container form {
         width: 100%;
     }
@@ -247,6 +248,13 @@ main .container form .submit {
     }
     main .container form .submit {
         align-self: center;
+    }    
+    main .container .image {
+        width: 100px;
+        height: 100px;
+    }
+    main .container .image > i {
+        font-size: 90px;
     }
 }
 /* END RESPUNSIVE MAIN */
